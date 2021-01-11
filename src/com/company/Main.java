@@ -9,6 +9,7 @@ public class Main {
         System.out.println("3. The middle character in the string: "+prostredni("350"));
         System.out.println("4. Number of Vowels in the string: "+samohlasky("w3resource"));
         System.out.println("5. Number of words in the string: "+pocetSlov("The quick brown fox jumps over the lazy dog."));
+        System.out.println("6. The sum is "+soucet(25));
     }
 
     public static int nejmensi (int a, int b, int c){
@@ -45,6 +46,15 @@ public class Main {
 
     public static int pocetSlov(String veta) {
         return veta.split(" ").length;
+    }
+
+    public static int soucet(int a) {
+        int vysledek = 0;
+        while(a > 0) {
+            vysledek += a % 10;
+            a /= 10;
+        }
+        return vysledek;
     }
 
 
